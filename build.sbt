@@ -9,7 +9,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "spark-practice",
     libraryDependencies += scalaTest % Test,
-    libraryDependencies += "org.apache.spark" % "spark-core_2.11" % "2.4.7" % "provided"
+    libraryDependencies += "org.apache.spark" % "spark-core_2.11" % "2.4.7" % "provided",
+    libraryDependencies += "org.apache.hadoop" % "hadoop-streaming" % "2.7.0"
   )
 
 
