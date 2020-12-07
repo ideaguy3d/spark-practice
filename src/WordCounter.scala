@@ -1,11 +1,12 @@
-package main
+package word_count
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 import org.apache.hadoop.io._
 
 object WordCounter {
-  def main(args: Array[String]) {
+  // manually changed from main to wc_main
+  def wc_main(args: Array[String]) {
     var saveToText = false
 
     val conf = new SparkConf().setAppName("Word Counter")

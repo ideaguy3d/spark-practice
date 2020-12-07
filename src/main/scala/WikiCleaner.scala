@@ -30,8 +30,25 @@ object WikiCleaner {
 		parsed.trim
 	}
 	
-	def firstPass(content: String) = {
+	def firstPass(content: String): String = {
+		var parsed = ""
+		var pos = 0
+		while (pos < content.size) {
+			var out: Option[TempParsed] = None
+			
+		}
+		parsed
+	}
 	
+	def parseSimpleTag(content: String, posVal: Int, start: String, end: String): Option[TempParsed] = {
+		var pos = posVal
+		if(content.slice(pos, pos + start.length) == start) {
+			pos = pos + start.length
+			var posEnd = content.indexOf(end, pos)
+			if(posEnd == -1) posEnd = content.length
+			Some(TempParsed(Option(content.slice(pos, posEnd)), posEnd + end.length))
+		}
+		else None
 	}
 	
 	def secondPass(content: String) = {
