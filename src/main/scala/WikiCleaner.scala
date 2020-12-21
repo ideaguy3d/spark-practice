@@ -35,7 +35,6 @@ object WikiCleaner {
 		var pos = 0
 		while (pos < content.size) {
 			var out: Option[TempParsed] = None
-			
 		}
 		parsed
 	}
